@@ -45,7 +45,7 @@ class ScrolllockLedSink(BaseSink):
         except GLib.Error as e:
             if e.message.startswith('GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown'):
                 # TODO proper logging
-                print("led-proxy is not blinking")
+                print("led-proxy is not running")
                 return False
             else:
                 raise
