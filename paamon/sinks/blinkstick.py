@@ -75,7 +75,7 @@ class BlinkStickSink(BaseSink):
 
     def trigger(self, notification: PaamonNotification, action: str):
         """ Trigger this sink on added or removed notifcation """
-        super().__init__()
+        super().trigger(notification, action)
 
         self.should_be_blinking = len(self.active_notifications) > 0
         if self.should_be_blinking and self.blink_timer_id is None:
